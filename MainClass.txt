@@ -1,0 +1,86 @@
+package com.asd.projectName;
+
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.audio.Sound;
+
+/*
+
+This is the "main" class for the whole program, it handles switching between
+different visual environments (screens) which each handle a different aspect of the game
+
+*/
+
+public class projectName extends Game {
+
+	// screens
+
+	protected MainScreen screen0;
+	protected BarCodeScreen screen1;
+
+	// screen values
+
+	public final static int SCREEN0 = 0;
+	public final static int SCREEN1 = 1;
+
+	// audio
+
+	protected Music exampleMusic;
+	protected Sound exampleSound;
+	
+	// this method loads the assets into memory and creates the initial mainScreen
+
+	public void create() {
+
+		Assets.loadTextures();
+		Assets.loadAudio();
+		Assets.manager.finishLoading();
+
+		screen0 = new Screen0(this);
+		setScreen(screen0);
+
+
+	}
+
+	// this method handles the operation of changing between screens and disposing them (setting to null) to conserve memory
+
+	public void changeScreen(int screen) {
+
+		switch(screen) {
+
+			case SCREEN0:
+
+				screen1 = null;
+				screen0 = new Screen0(this);
+				this.setScreen(screen0);
+				break;
+
+			case SCREEN1:
+
+				if (screen1 == null) {
+
+					screen0 = null;
+					screen1 = new Screen1(this);
+
+				}
+
+				this.setScreen(screen1);
+				break;
+
+		}
+
+	}
+
+	// This method disposes the asset manager as well as calls the super method (in the Game class)
+
+	@Override
+	public void dispose() {
+
+		Assets.dispose();
+		super.dispose();
+
+	}
+
+
+
+}
