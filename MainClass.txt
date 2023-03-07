@@ -16,7 +16,7 @@ public class projectName extends Game {
 	// screens
 
 	protected MainScreen screen0;
-	protected BarCodeScreen screen1;
+	protected subScreen screen1;
 
 	// screen values
 
