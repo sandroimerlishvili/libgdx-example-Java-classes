@@ -60,7 +60,7 @@ public class Assets {
     public static void loadAudio() {
 
         manager.load(exampleMusic, Music.class);
-        manager.load(e)
+        manager.load(exampleSound, Sound.class);
 
     }
 
