@@ -1,4 +1,4 @@
-package com.asd.projectName;
+package com.asd.projectname;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.audio.Music;
@@ -71,16 +71,14 @@ public class projectName extends Game {
 
 	}
 
-	// This method disposes the asset manager as well as calls the super method (in the Game class)
+	// This method disposes the asset manager as well as calls the super method (of the Game class)
 
-	@Override
+ 	@Override
 	public void dispose() {
 
 		Assets.dispose();
 		super.dispose();
 
 	}
-
-
 
 }
