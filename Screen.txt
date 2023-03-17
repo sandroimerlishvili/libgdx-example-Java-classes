@@ -1,4 +1,4 @@
-package com.asd.postalbarcodelab;
+package com.example.projectname;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -22,14 +22,14 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 
 /*
 
-This class is the entry screen of the program, displaying instructions for the user
-to type in the zipcode they want to convert and handling the input once it has been received
+This is a screen class that is to be used in conjunction with the Main Class which displays
+all the elements that will be on the screen
 
 */
 
 public class MainScreen extends ScreenAdapter {
 
-    private PostalBarCodeLab parent;
+    private projectName parent;
 
     //screen
 
@@ -68,7 +68,7 @@ public class MainScreen extends ScreenAdapter {
 
     // audio
 
-    public MainScreen(PostalBarCodeLab parentClass) {
+    public MainScreen(projectName parentClass) {
 
         // GameClass Setup
 
